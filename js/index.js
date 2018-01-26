@@ -26,7 +26,10 @@ function getDiscriminant(a, b, c) {
 const D = getDiscriminant(numA, numB, numC);
 
 const getSolution = function getSolution(a, b, D) {
-    if (D > 0) {
+    if (numA == 0) {
+        return ('<br>Коефіцієнт при першому доданку рівняння не може дорівнювати нулю, змініть його та спробуйте знову.');
+    }
+    else if (D > 0) {
         const x1 = ((-b + Math.sqrt(D)) / (2 * a));
         const x2 = ((-b - Math.sqrt(D)) / (2 * a));
         return ('<br>Так як дискримінант більше нуля, то квадратне рівняння має два дійсних кореня:<br><br>x1 = ' + x1 + ';<br><br> x2 = ' + x2);
